@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- jQuery version -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <!-- jQuery UI -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>  
+  <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS2b_index.css" />
+</head>
+<body>
+  
+ <div class="custom-container-fluid">
+    <!-- JSON file with .json as its extension -->
+    <div class="row">       
+      <div class="col-md-12" style="border-right: 2px solid gray">  
+        <h1 style="text-align: center; font-size: 1.5em" id="Question2">Question-2 02</h1>
+        
+              <h2>Provinces of Canada</h2>
+			  <div id="provinces"></div>
+			  
+			<script>
+			$(document).ready(function() {
+			  $.getJSON("province.json", function(data) {
+				$.each(data.provinces, function(index, value) {
+				  $("#provinces").append(
+					"<h3>Name: " + value.name + "</h3>" +
+					"<p>Capital: " + value.capital + "</p>" +
+					"<p>Timezone: " + value.timezone + "</p>" +
+					"<p>Description: " + value.description + "</p><br>"
+				  );
+				});
+			  });
+			});
+
+			</script>  
+	
+      </div>      
+    </div>  
+    
+	
+
+  </div>
+
+
+
+</body>
+</html>
