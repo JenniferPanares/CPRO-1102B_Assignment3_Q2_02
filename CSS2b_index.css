@@ -7,10 +7,11 @@ body {
     }
 
 .custom-container-fluid {
-  border: 3px solid #CD0000;   
-  margin: 1em;
+  border: 3px solid #CE5200;   
+  margin: 10%;
   padding: 1em; 
   box-shadow: 5px 5px;
-  background-color: white;
-
+  background-color: rgba(255, 255, 255, 0.8); /* 80% opaque white */
 }
+
+
